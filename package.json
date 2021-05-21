@@ -1,0 +1,26 @@
+{
+  "name": "atm-user-stories-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilbekDzhumakeev/ATM-User-Stories-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilbekDzhumakeev/ATM-User-Stories-/issues"
+  },
+  "homepage": "https://github.com/EmilbekDzhumakeev/ATM-User-Stories-#readme"
+}
