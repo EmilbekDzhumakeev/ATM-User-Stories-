@@ -1,24 +1,32 @@
 "use strict";
  
 /////////////////////// import files /////////////////////////   
-const {balance, pin} = require("./account");  
-
+let {balance, pin} = require("./account");  
+let { pocketBalance } = require("./wallet");
+balance -= 20;
+pocketBalance += 20;
 const prompt = require("prompt-sync")(); 
 
 
 //////////////////////////////////////////////////////////////  
 function getBalance(){
     console.log("You balance is: "+ balance);
-
-
 } 
 //////////////////////////////////////////////////////////////  
-function withdraw(){
-
+function withdraw(){ 
+    let amount = prompt("Enter wothdraw amount: "); 
+    
+    balance -= amount;
+    pocketBalance += amount;
+    console.log("wallet Balance: "+ pocketBalance);
 } 
 //////////////////////////////////////////////////////////////  
-function deposit(){
-
+function deposit(){ 
+    let amount = prompt("Enter deposit amount: "); 
+  
+    balance += amount;
+    pocketBalance -= amount; 
+    console.log("wallet Balance: "+ pocketBalance);
 } 
 //////////////////////////////////////////////////////////////  
 function validatePin(){ 

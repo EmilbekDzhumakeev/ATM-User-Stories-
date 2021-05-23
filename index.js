@@ -1,21 +1,20 @@
 "use strict";
 
 /////////////////////// import files ///////////////////////// 
-const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")(); 
+let {pocketBalance} = require("./wallet");  
 const { getBalance, validatePin, withdraw, deposit } = require("./atm");
-//const atm = require("./atm");
 
+console.log("Welcome to Node ATM!");   
+console.log("Wallet balance: "+ pocketBalance); 
+userMenu();  
 
-
-console.log("hello world from index");   
-
-
-getBalance();
-userMenu();1
+/////////////////////////////////////////////////////////////////////
 function userMenu(){ 
-
-    while (validatePin()) {
-        let userInput= prompt("What would you like to do? Choose: 1-View Balance,  2-Withdraw, 3-Deposit or 4");
+    validatePin(); 
+  let proceed;
+    while (proceed!=="quit") {
+        let userInput= prompt("What would you like to do? Choose: 1-View Balance,  2-Withdraw, 3-Deposit or 4-Quit transaction: ");
      switch (userInput) {
          case "1":
             getBalance();
@@ -27,11 +26,12 @@ function userMenu(){
            deposit();
          break; 
          case "4":
-             myTrip[3]=(random(entertainment));
+            proceed = "quit";
          break;
          default: 
          console.log("Wrong input entry! Try again !");
-         break; 
+         break;  
+         
      }
 } 
 

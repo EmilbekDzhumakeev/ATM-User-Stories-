@@ -2,7 +2,7 @@
 
 
 
-let pocketBalance = 0;
+let pocketBalance = 500;
 
  /////////////////////// export files /////////////////////////  
  module.exports = {
