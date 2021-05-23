@@ -1,7 +1,8 @@
 "use strict";
  
 /////////////////////// import files /////////////////////////   
-const {balance} = require("./account"); 
+const {balance, pin} = require("./account");  
+
 const prompt = require("prompt-sync")(); 
 
 
@@ -20,7 +21,12 @@ function deposit(){
 
 } 
 //////////////////////////////////////////////////////////////  
-function validatePin(){
+function validatePin(){ 
+    let userPin = prompt("Please enter your pin!");
+if (parseInt(userPin) === pin){
+    return true; }
+    else { console.log("Incorrect pin!");
+        return false;}
 
 } 
 //////////////////////////////////////////////////////////////  
