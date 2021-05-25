@@ -7,11 +7,14 @@ const { getBalance, validatePin, withdraw, deposit } = require("./atm");
 
 console.log("Welcome to Node ATM!");   
 console.log("Wallet balance: "+ pocketBalance); 
-userMenu();  
+
+if (validatePin()){ 
+userMenu();} 
+else {console.log("Try again next time...");}
 
 /////////////////////////////////////////////////////////////////////
 function userMenu(){ 
-    validatePin(); 
+    
   let proceed;
     while (proceed!=="quit") {
         let userInput= prompt("What would you like to do? Choose: 1-View Balance,  2-Withdraw, 3-Deposit or 4-Quit transaction: ");
@@ -35,4 +38,5 @@ function userMenu(){
      }
 } 
 
-}
+} 
+console.log("Thank you for using Node ATM have a great day!");
